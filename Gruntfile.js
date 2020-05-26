@@ -129,7 +129,6 @@ module.exports = function(grunt) {
                     conn: {
 						client: '801',
 						server: 'http://i42lp1.informatik.tu-muenchen.de:8000/',
-                        // transportRequest: 'I42K902395',
                         useStrictSSL: false,
                         port: 8000
                     },
@@ -143,7 +142,7 @@ module.exports = function(grunt) {
 						//I42K902248
 						package: 'Z801_PROJECT_PACK_MIDI',
 						bspcontainer: 'Z801_BOOKS_MIDI',
-						bspcontainer_text: 'Books UI5 Miru\'s app '
+						bspcontainer_text: 'Books UI5 Miru'
 					},
 					resources: {
 						cwd: 'dist',

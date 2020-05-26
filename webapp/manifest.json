@@ -14,7 +14,8 @@
           "uri": "/sap/opu/odata/SAP/Z801_LIBRARY_MIDI_SRV/",
           "type": "OData",
           "settings": {
-            "odataVersion": "2.0"
+            "odataVersion": "2.0",
+            "localUri": "localService/metadata.xml"
           }
         }
       }
