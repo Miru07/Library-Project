@@ -1,0 +1,54 @@
+<mvc:View
+	controllerName="org.ubb.books.controller.NavContainer"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<VBox
+		class="sapUiSmallMargin">
+
+        <HBox>
+			<Button
+				text="To Book section"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p1" />
+				</customData>
+			</Button>
+			<Button
+				text="To Checkout section"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p2" />
+				</customData>
+			</Button>
+		</HBox>
+
+		<NavContainer
+			id="navCon"
+			width="98%"
+			height="16em"
+			class="navContainerControl sapUiSmallMarginBottom">
+			<Page
+				id="p1"
+				title="Book section" >
+                <mvc:XMLView viewName="org.ubb.books.view.BookTable"/>
+				<footer><Toolbar><Button text="Book section" /></Toolbar></footer>
+			</Page>
+			<Page
+				id="p2"
+				title="Checkout section" >
+				<footer><Toolbar><Button text="Checkout section" /></Toolbar></footer>
+			</Page>
+		</NavContainer>
+	</VBox>
+</mvc:View>
