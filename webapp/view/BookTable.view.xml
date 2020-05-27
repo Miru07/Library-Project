@@ -21,7 +21,8 @@
 			smartFilterId="smartFilterBar" useExportToExcel="true" beforeExport="onBeforeExport"
 			useVariantManagement="false" useTablePersonalisation="true" header="Products"
 			showRowCount="true" persistencyKey="SmartTableRefApp_Explored"
-			enableAutoBinding="true" class="sapUiResponsiveContentPadding">
+			enableAutoBinding="true" class="sapUiResponsiveContentPadding"
+			initiallyVisibleFields="ISBN,Author,Title,Published,Language,AvailableNr,TotalNr">
 			<!-- layout for table growing but the filter bar fixed -->
 			<smartTable:layoutData>
 				<FlexItemData growFactor="1" baseSize="0%" />
