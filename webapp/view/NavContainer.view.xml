@@ -5,10 +5,9 @@
 	xmlns="sap.m">
 	<VBox
 		class="sapUiSmallMargin">
-
         <HBox>
 			<Button
-				text="To Book section"
+				text="Show list"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -20,7 +19,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="To Checkout section"
+				text="Add book"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -31,23 +30,73 @@
 						value="p2" />
 				</customData>
 			</Button>
+			<Button
+				text="Update book"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p3" />
+				</customData>
+			</Button>
+			<Button
+				text="Delete book"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p4" />
+				</customData>
+			</Button>
+			<Button
+				text="Burrowed Books"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p5" />
+				</customData>
+			</Button>
 		</HBox>
 
 		<NavContainer
 			id="navCon"
 			width="98%"
-			height="16em"
+			height="100em"
 			class="navContainerControl sapUiSmallMarginBottom">
 			<Page
 				id="p1"
 				title="Book section" >
                 <mvc:XMLView viewName="org.ubb.books.view.BookTable"/>
-				<footer><Toolbar><Button text="Book section" /></Toolbar></footer>
 			</Page>
 			<Page
 				id="p2"
-				title="Checkout section" >
-				<footer><Toolbar><Button text="Checkout section" /></Toolbar></footer>
+				title="Add book" >
+				<mvc:XMLView viewName="org.ubb.books.view.AddBookPage"/>
+			</Page>
+			<Page
+				id="p3"
+				title="Update book" >
+				<mvc:XMLView viewName="org.ubb.books.view.UpdateBookPage"/>
+			</Page>
+			<Page
+				id="p4"
+				title="Delete book" >
+				<mvc:XMLView viewName="org.ubb.books.view.DeleteBookPage"/>
+			</Page>
+			<Page
+				id="p5"
+				title="Burrowed books" >
+				<mvc:XMLView viewName="org.ubb.books.view.BurrowedBookTable"/>
 			</Page>
 		</NavContainer>
 	</VBox>

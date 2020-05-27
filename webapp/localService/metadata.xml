@@ -5,8 +5,8 @@
 <Key>
 <PropertyRef Name="ISBN"/>
 </Key>
-<Property Name="Available" Type="Edm.String" MaxLength="100" sap:label="Available"/>
-<Property Name="Total" Type="Edm.String" MaxLength="100" sap:label="Total"/>
+<Property Name="Available" Type="Edm.Int32" sap:label="Available"/>
+<Property Name="Total" Type="Edm.Int32" sap:label="Total"/>
 <Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Language"/>
 <Property Name="Published" Type="Edm.DateTime" Precision="0" sap:label="Published"/>
 <Property Name="Title" Type="Edm.String" MaxLength="100" sap:label="Title"/>
@@ -15,6 +15,19 @@
 </EntityType>
 <EntityContainer Name="Z801_LIBRARY_MIDI_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
 <EntitySet Name="Books" EntityType="Z801_LIBRARY_MIDI_SRV.Book" sap:searchable="true" sap:content-version="1"/>
+<EntityType Name="BurrowedBook" sap:content-version="1">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN"/>
+<Property Name="ReturnDate" Type="Edm.DateTime" Precision="0" sap:label="ReturnDate"/>
+<Property Name="CheckoutDate" Type="Edm.DateTime" Precision="0" sap:label="Check out"/>
+<Property Name="LastName" Type="Edm.String" MaxLength="40" sap:label="Last Name"/>
+<Property Name="FirstName" Type="Edm.String" MaxLength="40" sap:label="First Name"/>
+<Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ID"/>
+</EntityType>
+<EntityContainer Name="Z801_LIBRARY_MIDI_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+<EntitySet Name="BurrowedBooks" EntityType="Z801_LIBRARY_MIDI_SRV.BurrowedBook" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
 </EntityContainer>
 <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://localhost:9555/sap/opu/odata/SAP/Z801_LIBRARY_MIDI_SRV/$metadata"/>
 <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://localhost:9555/sap/opu/odata/SAP/Z801_LIBRARY_MIDI_SRV/$metadata"/>
