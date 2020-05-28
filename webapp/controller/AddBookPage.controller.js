@@ -10,28 +10,33 @@ sap.ui.define([
                 ISBN: "",
                 Title: "",
                 Author: "",
-                PublishedDate: "",
+                Published: "",
                 Language: "",
-                TotalNr: 0,
-                AvailableNr: 0
+                Total: 0,
+                Available: 0
             };
+            
             debugger;
             oBook.ISBN = this.getView().byId("isbn").getValue();
             oBook.Title = this.getView().byId("title").getValue();
             oBook.Author = this.getView().byId("author").getValue();
-            oBook.PublishedDate = new Date(this.getView().byId("publishedDate").getValue());
+            oBook.Published = this.getView().byId("publishedDate").getValue();
             oBook.Language = this.byId("language").getValue();
-            oBook.TotalNr = this.byId("totalBooks").getValue();
-            oBook.AvailableNr = this.byId("availableBooks").getValue();
+            oBook.Total = this.byId("totalBooks").getValue();
+            oBook.Available = this.byId("availableBooks").getValue();
 
-            this.getView().getModel().create("/Books", oBook, {
-                success: function () {
-                    MessageToast.show("Book inserted!");
-                },
-                error: function () {
-                    MessageToast.show("Error :(");
-                }
-            });
+            if(oBook.Total >= oBook.Available) {
+                this.getView().getModel().create("/Books", oBook, {
+                    success: function () {
+                        MessageToast.show("Book inserted! :)");
+                    },
+                    error: function () {
+                        MessageToast.show("Error :(");
+                    }
+                });
+            } else {
+                MessageToast.show("Total should be greater than available! :(");
+            }
        }
 
     });

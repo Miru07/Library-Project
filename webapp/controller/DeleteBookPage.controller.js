@@ -1,6 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
- ], function (Controller) {
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast"
+ ], function (Controller, MessageToast) {
     "use strict";
     return Controller.extend("org.ubb.books.controller.DeleteBookPage", {
        
@@ -9,7 +10,14 @@ sap.ui.define([
 
             const sPath = aSelectedContexts[0].getPath();
 
-            this.getView().getModel().remove(sPath);
+            this.getView().getModel().remove(sPath, {
+                success: function () {
+                    MessageToast.show("Book deleted! :)");
+                },
+                error: function () {
+                    MessageToast.show("Error from the dark side :(");
+                }
+            });
         }
     });
  });

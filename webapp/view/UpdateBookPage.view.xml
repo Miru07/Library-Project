@@ -10,7 +10,7 @@
 		<Label text="Author"/>
 		<Input id="author" placeholder="Enter here author"/>
 		<Label text="Publish Date"/>
-		<DatePicker id="publishedDate" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom"/>
+		<DateTimePicker id="publishedDate" displayFormat="short" valueFormat="yyyy-MM-ddTHH:mm" change="handleChange" class="sapUiSmallMarginBottom"/>
 		<Label text="Language"/>
 		<Input id="language" placeholder="Enter here language"/>
 		<Label text="Total Number Books"/>
@@ -18,5 +18,5 @@
 		<Label text="Available Number Books"/>
 		<Input id="availableBooks" placeholder="Enter here available number"/>
 		<Label/>
-		<Button text="{i18n>updateBookButton}" type="Accept" press="handleSaveBtnBook"></Button>
+		<Button text="{i18n>updateBookButton}" type="Accept" press="onUpdateBook"></Button>
 </mvc:View>
