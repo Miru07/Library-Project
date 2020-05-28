@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, MessageToast) {
 	"use strict";
 
-	return Controller.extend("org.ubb.books.controller.BooksSmartTable", {
+	return Controller.extend("org.ubb.books.controller.BookTable", {
 		onInit: function () {
 
 		},
