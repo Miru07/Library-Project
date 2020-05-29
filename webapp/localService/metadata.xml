@@ -5,40 +5,40 @@
 <Key>
 <PropertyRef Name="ISBN"/>
 </Key>
-<Property Name="Available" Type="Edm.Int32" sap:label="Available"/>
-<Property Name="Total" Type="Edm.Int32" sap:label="Total"/>
-<Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Language"/>
-<Property Name="Published" Type="Edm.DateTime" Precision="0" sap:label="Published"/>
-<Property Name="Title" Type="Edm.String" MaxLength="100" sap:label="Title"/>
-<Property Name="Author" Type="Edm.String" MaxLength="100" sap:label="Author"/>
-<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN"/>
+<Property Name="Available" Type="Edm.Int32" sap:label="Available" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Total" Type="Edm.Int32" sap:label="Total" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Language" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Published" Type="Edm.DateTime" Precision="0" sap:label="Published" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Title" Type="Edm.String" MaxLength="100" sap:label="Title" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Author" Type="Edm.String" MaxLength="100" sap:label="Author" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
 </EntityType>
 <EntityType Name="BurrowedBook" sap:content-version="1">
 <Key>
 <PropertyRef Name="ID"/>
 </Key>
-<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN"/>
-<Property Name="ReturnDate" Type="Edm.DateTime" Precision="0" sap:label="ReturnDate"/>
-<Property Name="CheckoutDate" Type="Edm.DateTime" Precision="0" sap:label="Check out"/>
-<Property Name="LastName" Type="Edm.String" MaxLength="40" sap:label="Last Name"/>
-<Property Name="FirstName" Type="Edm.String" MaxLength="40" sap:label="First Name"/>
-<Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ID"/>
+<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="ReturnDate" Type="Edm.DateTime" Precision="0" sap:label="ReturnDate" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="CheckoutDate" Type="Edm.DateTime" Precision="0" sap:label="Check out" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="LastName" Type="Edm.String" MaxLength="40" sap:label="Last Name" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="FirstName" Type="Edm.String" MaxLength="40" sap:label="First Name" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ID" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
 </EntityType>
 <EntityType Name="CheckoutBook" sap:content-version="1">
 <Key>
 <PropertyRef Name="ISBN"/>
 </Key>
-<Property Name="Available" Type="Edm.String" sap:label="Available"/>
-<Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Language"/>
-<Property Name="Published" Type="Edm.DateTime" Precision="0" sap:label="Published"/>
-<Property Name="Title" Type="Edm.String" MaxLength="100" sap:label="Title"/>
-<Property Name="Author" Type="Edm.String" MaxLength="100" sap:label="Author"/>
-<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN"/>
+<Property Name="Available" Type="Edm.String" sap:label="Available" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Language" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Published" Type="Edm.DateTime" Precision="0" sap:label="Published" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Title" Type="Edm.String" MaxLength="100" sap:label="Title" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="Author" Type="Edm.String" MaxLength="100" sap:label="Author" sap:creatable="true" sap:updatable="true" sap:filterable="true"/>
+<Property Name="ISBN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ISBN sap:creatable="true" sap:updatable="true" sap:filterable="true""/>
 </EntityType>
 <EntityContainer Name="Z801_LIBRARY_MIDI_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
-<EntitySet Name="Books" EntityType="Z801_LIBRARY_MIDI_SRV.Book" sap:searchable="true" sap:content-version="1"/>
-<EntitySet Name="BurrowedBooks" EntityType="Z801_LIBRARY_MIDI_SRV.BurrowedBook" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
-<EntitySet Name="CheckoutBooks" EntityType="Z801_LIBRARY_MIDI_SRV.CheckoutBook" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+<EntitySet Name="Books" EntityType="Z801_LIBRARY_MIDI_SRV.Book" sap:searchable="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" sap:content-version="1"/>
+<EntitySet Name="BurrowedBooks" EntityType="Z801_LIBRARY_MIDI_SRV.BurrowedBook" sap:deletable="false"s ap:creatable="true" sap:updatable="true" sap:filterable="true" sap:searchable="true" sap:content-version="1"/>
+<EntitySet Name="CheckoutBooks" EntityType="Z801_LIBRARY_MIDI_SRV.CheckoutBook" sap:deletable="false" sap:creatable="true" sap:updatable="true" sap:filterable="true" sap:searchable="true" sap:content-version="1"/>
 </EntityContainer>
 <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://localhost:9555/sap/opu/odata/SAP/Z801_LIBRARY_MIDI_SRV/$metadata"/>
 <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://localhost:9555/sap/opu/odata/SAP/Z801_LIBRARY_MIDI_SRV/$metadata"/>

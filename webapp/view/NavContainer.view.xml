@@ -7,7 +7,7 @@
 		class="sapUiSmallMargin">
         <HBox>
 			<Button
-				text="Show list"
+				text="{i18n>showList}"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -19,7 +19,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="Add book"
+				text="{i18n>addBook}"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -31,7 +31,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="Update book"
+				text="{i18n>updateBook}"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -43,7 +43,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="Delete book"
+				text="{i18n>deleteBook}"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -55,7 +55,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="Burrowed Books"
+				text="{i18n>burrowedBookList}"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -75,27 +75,27 @@
 			class="navContainerControl sapUiSmallMarginBottom">
 			<Page
 				id="p1"
-				title="Book section" >
+				title="{i18n>bookSection}" >
                 <mvc:XMLView viewName="org.ubb.books.view.BookTable"/>
 			</Page>
 			<Page
 				id="p2"
-				title="Add book" >
+				title="{i18n>addSection}" >
 				<mvc:XMLView viewName="org.ubb.books.view.AddBookPage"/>
 			</Page>
 			<Page
 				id="p3"
-				title="Update book" >
+				title="{i18n>updateSection}" >
 				<mvc:XMLView viewName="org.ubb.books.view.UpdateBookPage"/>
 			</Page>
 			<Page
 				id="p4"
-				title="Delete book" >
+				title="{i18n>deleteSection}" >
 				<mvc:XMLView viewName="org.ubb.books.view.DeleteBookPage"/>
 			</Page>
 			<Page
 				id="p5"
-				title="Burrowed books" >
+				title="{i18n>bBookSection}" >
 				<mvc:XMLView viewName="org.ubb.books.view.BurrowedBookTable"/>
 			</Page>
 		</NavContainer>

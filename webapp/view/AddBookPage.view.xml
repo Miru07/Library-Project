@@ -4,20 +4,20 @@
 	xmlns:core="sap.ui.core"
 	xmlns="sap.m">
 		<VBox>
-		<Label text="ISBN"/>
-		<Input id="isbn" placeholder="Enter here isbn" maxLength="13"/>
-		<Label text="Title"/>
-		<Input id="title" placeholder="Enter here title"/>
-		<Label text="Author"/>
-		<Input id="author" placeholder="Enter here author"/>
-		<Label text="Publish Date"/>
+		<Label text="{i18n>isbn}"/>
+		<Input id="isbn" placeholder="{i18n>isbnPlaceholder}" maxLength="13"/>
+		<Label text="{i18n>title}"/>
+		<Input id="title" placeholder="{i18n>titlePlaceholder}"/>
+		<Label text="{i18n>author}"/>
+		<Input id="author" placeholder="{i18n>authorPlaceholder}"/>
+		<Label text="{i18n>published}"/>
 		<DateTimePicker id="publishedDate" displayFormat="short" valueFormat="yyyy-MM-ddTHH:mm" change="handleChange" class="sapUiSmallMarginBottom"/>
-		<Label text="Language"/>
-		<Input id="language" placeholder="Enter here language"/>
-		<Label text="Total Number Books"/>
-		<Input id="totalBooks" placeholder="Enter here total number"/>
-		<Label text="Available Number Books"/>
-		<Input id="availableBooks" placeholder="Enter here available number"/>
+		<Label text="{i18n>lang}"/>
+		<Input id="language" placeholder="{i18n>langPlaceholder}"/>
+		<Label text="{i18n>total}"/>
+		<Input id="totalBooks" placeholder="{i18n>totalPlaceholder}"/>
+		<Label text="{i18n>available}"/>
+		<Input id="availableBooks" placeholder="{i18n>availablePlaceholder}"/>
 		<Label/>
 		<Button text="{i18n>addBookButton}" type="Accept" press="onAddBook"></Button>
 		</VBox>

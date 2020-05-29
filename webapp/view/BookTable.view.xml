@@ -8,15 +8,7 @@
 	controllerName="org.ubb.books.controller.BookTable"
 	height="100%">
 
-	<!-- table occupies the available screen height -->
 	<VBox fitContainer="true">
-		<smartFilterBar:SmartFilterBar id="smartFilterBar"
-			entitySet="Books" persistencyKey="SmartFilter_Explored">
-			<!-- layout for table growing but the filter bar fixed -->
-			<smartFilterBar:layoutData>
-				<FlexItemData shrinkFactor="0" />
-			</smartFilterBar:layoutData>
-		</smartFilterBar:SmartFilterBar>
 		<smartTable:SmartTable entitySet="Books" id="bookTable"
 			smartFilterId="smartFilterBar"
 			useVariantManagement="false" 
@@ -25,9 +17,9 @@
 			showRowCount="true" 
 			persistencyKey="SmartTableRefApp_Explored"
 			enableAutoBinding="true" 
+			tableBindingPath="{/Books}"
 			class="sapUiResponsiveContentPadding"
-			initiallyVisibleFields="ISBN,Author,Title,Published,Language,Available,Total">
-			<!-- layout for table growing but the filter bar fixed -->
+			initiallyVisibleFields="ISBN,Author,Title,Published,Language,Total">
 			<smartTable:layoutData>
 				<FlexItemData growFactor="1" baseSize="0%" />
 			</smartTable:layoutData>

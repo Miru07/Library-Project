@@ -28,22 +28,22 @@
 	
 		<columns>
 			<Column>
-				<Text text="Title" />
+				<Text text="{i18n>title}" />
 			</Column>
 			<Column>
-				<Text text="Author" />
+				<Text text="{i18n>author}" />
 			</Column>
 			<Column>
-				<Text text="Published on" />
+				<Text text="{i18n>published}" />
 			</Column>
 			<Column>
-				<Text text="Language" />
+				<Text text="{i18n>lang}" />
 			</Column>
             <Column>
-				<Text text="Available books" />
+				<Text text="{i18n>available}" />
 			</Column>
 			<Column>
-				<Text text="Total" />
+				<Text text="{i18n>total}" />
 			</Column>
 		</columns>
 		<items>
