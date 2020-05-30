@@ -38,14 +38,13 @@ sap.ui.define([
         onUpdateDialogOpen: function(event) {
             var oView = this.getView();
                 if (!this.byId("updateDialog") ) {
-				    
 				Fragment.load({
 					id: oView.getId(),
                     name: "org.ubb.books.fragment.UpdateBookDialog",
                     controller: this
 				}).then(function (oDialog) {
                     oView.addDependent(oDialog);
-					oDialog.open();
+                    oDialog.open();
 				});
 			} else {
                 this.insertPlaceholderData();
@@ -58,7 +57,6 @@ sap.ui.define([
         },
 
         insertPlaceholderData() {
-            debugger;
             var oItem = this.getView().byId("deleteBookTable").getSelectedItem();
 
             if (oItem !== null){
