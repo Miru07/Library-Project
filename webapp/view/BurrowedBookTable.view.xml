@@ -10,19 +10,15 @@
 
 	<!-- table occupies the available screen height -->
 	<VBox fitContainer="true">
-		<smartFilterBar:SmartFilterBar id="smartFilterBar"
-			entitySet="BurrowedBooks" persistencyKey="SmartFilter_Explored">
-			<!-- layout for table growing but the filter bar fixed -->
-			<smartFilterBar:layoutData>
-				<FlexItemData shrinkFactor="0" />
-			</smartFilterBar:layoutData>
-		</smartFilterBar:SmartFilterBar>
 		<smartTable:SmartTable entitySet="BurrowedBooks" id="burrowedBookTable"
-			smartFilterId="smartFilterBar" useExportToExcel="true" beforeExport="onBeforeExport"
-			useVariantManagement="false" useTablePersonalisation="true" header="Products"
-			showRowCount="true" persistencyKey="SmartTableRefApp_Explored"
-			enableAutoBinding="true" class="sapUiResponsiveContentPadding"
-			initiallyVisibleFields="ISBN,Author,Title,Published,Language,AvailableNr">
+			smartFilterId="smartFilterBar"
+			useTablePersonalisation="true"
+			header="BurrowedBooks"
+			showRowCount="true" 
+			persistencyKey="SmartTableRefApp_Explored"
+			enableAutoBinding="true" 
+			class="sapUiResponsiveContentPadding"
+			initiallyVisibleFields="ISBN,Author,Title,Checkout,Return">
 			<!-- layout for table growing but the filter bar fixed -->
 			<smartTable:layoutData>
 				<FlexItemData growFactor="1" baseSize="0%" />

@@ -43,18 +43,6 @@
 				</customData>
 			</Button>
 			<Button
-				text="{i18n>deleteBook}"
-				press="handleNav">
-				<layoutData>
-					<FlexItemData growFactor="1" />
-				</layoutData>
-				<customData>
-					<core:CustomData
-						key="target"
-						value="p4" />
-				</customData>
-			</Button>
-			<Button
 				text="{i18n>burrowedBookList}"
 				press="handleNav">
 				<layoutData>
@@ -63,7 +51,7 @@
 				<customData>
 					<core:CustomData
 						key="target"
-						value="p5" />
+						value="p4" />
 				</customData>
 			</Button>
 		</HBox>
@@ -86,15 +74,10 @@
 			<Page
 				id="p3"
 				title="{i18n>updateSection}" >
-				<mvc:XMLView viewName="org.ubb.books.view.UpdateBookPage"/>
+				<mvc:XMLView viewName="org.ubb.books.view.UpdateDeleteBookPage"/>
 			</Page>
 			<Page
 				id="p4"
-				title="{i18n>deleteSection}" >
-				<mvc:XMLView viewName="org.ubb.books.view.DeleteBookPage"/>
-			</Page>
-			<Page
-				id="p5"
 				title="{i18n>bBookSection}" >
 				<mvc:XMLView viewName="org.ubb.books.view.BurrowedBookTable"/>
 			</Page>

@@ -14,12 +14,12 @@
 			useVariantManagement="false" 
 			useTablePersonalisation="true" 
 			header="Books"
+			tableType="ResponsiveTable"
 			showRowCount="true" 
 			persistencyKey="SmartTableRefApp_Explored"
-			enableAutoBinding="true" 
-			tableBindingPath="{/Books}"
+			enableAutoBinding="true"
 			class="sapUiResponsiveContentPadding"
-			initiallyVisibleFields="ISBN,Author,Title,Published,Language,Total">
+			initiallyVisibleFields="ISBN,Author,Title,Published,Language,Available,Total">
 			<smartTable:layoutData>
 				<FlexItemData growFactor="1" baseSize="0%" />
 			</smartTable:layoutData>
